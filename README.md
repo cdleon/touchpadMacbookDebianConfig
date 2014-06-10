@@ -13,15 +13,15 @@ From http://www.x.org/archive/X11R7.5/doc/man/man4/synaptics.4.html:
 
 ###Table of Contents
 
-1.Name
-2.Synopsis
-3.Description
-4.Configuration Details
-5.Device Properties
-6.Notes
-7.Removed Options
-8.Authors
-9.See Also
+1. Name
+2. Synopsis
+3. Description
+4. Configuration Details
+5. Device Properties
+6. Notes
+7. Removed Options
+8. Authors
+9. See Also
 
 ===========================
 

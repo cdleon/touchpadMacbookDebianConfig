@@ -11,17 +11,17 @@ From http://www.x.org/archive/X11R7.5/doc/man/man4/synaptics.4.html:
 
 ===========================
 
-####Table of Contents
+###Table of Contents
 
-Name
-Synopsis
-Description
-Configuration Details
-Device Properties
-Notes
-Removed Options
-Authors
-See Also
+1.Name
+2.Synopsis
+3.Description
+4.Configuration Details
+5.Device Properties
+6.Notes
+7.Removed Options
+8.Authors
+9.See Also
 
 ===========================
 
@@ -71,7 +71,7 @@ Please refer to xorg.conf(5) for general configuration details and for options t
 The following driver Options are supported:
 
 **Option** "Device" "string"
-This **option** specifies the device file in your "/dev" directory which will be used to access the physical device. Normally you should use something like "/dev/input/eventX", where X is some integer.
+This option specifies the device file in your "/dev" directory which will be used to access the physical device. Normally you should use something like "/dev/input/eventX", where X is some integer.
 
 **Option** "Protocol" "string"
 Specifies which kernel driver will be used by this driver. This is the list of supported drivers and their default use scenarios.
@@ -81,7 +81,7 @@ psaux	raw device access (Linux 2.4)
 psm	FreeBSD psm driver
 
 **Option** "SHMConfig" "boolean"
-Switch on/off shared memory for run-time configuration. Note that this is considered a security risk since any user can access the configuration. This **option** is not needed with synaptics 1.0 or later. See section Device Properties.
+Switch on/off shared memory for run-time configuration. Note that this is considered a security risk since any user can access the configuration. This option is not needed with synaptics 1.0 or later. See section Device Properties.
 
 **Option** "LeftEdge" "integer"
 X coordinate for left edge. Property: "Synaptics Edges"
@@ -305,21 +305,20 @@ The LeftEdge, RightEdge, TopEdge and BottomEdge parameters are used to define th
 4
 7
 Physical left edge
-Coordinates to the left of LeftEdge are part of the left edge (areas 1, 4 and 7), coordinates to the left of LeftEdge and above TopEdge (area 1) are part of the upper left corner, etc. A good way to find appropriate edge parameters is to enable the SHMConfig **option** and run "synclient -m 1" to see the x/y coordinates corresponding to different positions on the touchpad.
+Coordinates to the left of LeftEdge are part of the left edge (areas 1, 4 and 7), coordinates to the left of LeftEdge and above TopEdge (area 1) are part of the upper left corner, etc. A good way to find appropriate edge parameters is to enable the SHMConfig option and run "synclient -m 1" to see the x/y coordinates corresponding to different positions on the touchpad.
 
 **Option** "AreaLeftEdge" "integer"
-Ignore movements, scrolling and tapping which take place left of this edge. The **option** is disabled by default and can be enabled by setting the AreaLeftEdge **option** to any integer value other than zero. Property: "Synaptics Area"
+Ignore movements, scrolling and tapping which take place left of this edge. The option is disabled by default and can be enabled by setting the AreaLeftEdge option to any integer value other than zero. Property: "Synaptics Area"
 
 **Option** "AreaRightEdge" "integer"
-Ignore movements, scrolling and tapping which take place right of this edge. The **option** is disabled by default and can be enabled by setting the AreaRightEdge **option** to any integer value other than zero. Property: "Synaptics Area"
+Ignore movements, scrolling and tapping which take place right of this edge. The option is disabled by default and can be enabled by setting the AreaRightEdge option to any integer value other than zero. Property: "Synaptics Area"
 
 **Option** "AreaTopEdge" "integer"
-Ignore movements, scrolling and tapping which take place above this edge. The **option** is disabled by default and can be enabled by setting the AreaTopEdge **option** to any integer value other than zero. Property: "Synaptics Area"
+Ignore movements, scrolling and tapping which take place above this edge. The ption is disabled by default and can be enabled by setting the AreaTopEdge option to any integer value other than zero. Property: "Synaptics Area"
 
 **Option** "AreaBottomEdge" "integer"
-Ignore movements, scrolling and tapping which take place below this edge. The **option** is disabled by default and can be enabled by setting the AreaBottomEdge **option** to any integer value other than zero. Property: "Synaptics Area"
+Ignore movements, scrolling and tapping which take place below this edge. The option is disabled by default and can be enabled by setting the AreaBottomEdge option to any integer value other than zero. Property: "Synaptics Area"
 
-===========================
 
 A tap event happens when the finger is touched and released in a time interval shorter than MaxTapTime, and the touch and release coordinates are less than MaxTapMove units apart. A "touch" event happens when the Z value goes above FingerHigh, and an "untouch" event happens when the Z value goes below FingerLow.
 
@@ -436,7 +435,10 @@ This read-only property expresses the physical capability of the touchpad, most 
 
 Synaptics Pad Resolution
 32 bit unsigned, 2 values (read-only), vertical, horizontal in units/millimeter.
-Notes
+
+===========================
+
+###Notes
 
 There is an example hal policy file in ${sourcecode}/fdi/11-x11-synaptics.fdi which will enable the driver based on the information if the hardware is available. Feel free to copy it to /etc/hal/fdi/policy and customize it to your needs. You can pass custom options to the driver using x11_options properties. Note that this requires xorg-server-1.5 or higher.
 If either of Protocol "auto-dev" (default) or Protocol "event" is used, the driver initializes defaults based on the capabilities reported by the kernel driver. Acceleration, edges and resolution are based on the dimensions reported by the kernel. If the kernel reports multi-finger detection, two-finger vertical scrolling is enabled, horizontal two-finger scrolling is disabled and edge scrolling is disabled. If no multi-finger capabilities are reported, edge scrolling is enabled for both horizontal and vertical scrolling. Tapping is disabled by default for touchpads with one or more physical buttons. To enable it you need to map tap actions to buttons. See the "TapButton1", "TapButton2" and "TapButton3" options.
@@ -454,25 +456,27 @@ The following options are no longer part of the driver configuration:
 
 ===========================
 
-####Authors
+###Authors
 
 Peter Osterlund <petero2@telia.com> and many others.
 
-See Also
+===========================
+
+###See Also
 
 Xorg(1) , xorg.conf(5) , Xserver(1) , X(7) , synclient(1) , syndaemon(1)
 
 ===========================
 
-#####Table of Contents
+####Table of Contents
 
-Name
-Synopsis
-Description
-Configuration Details
-Device Properties
-Notes
-Removed Options
-Authors
-See Also
+1.Name
+2.Synopsis
+3.Description
+4.Configuration Details
+5.Device Properties
+6.Notes
+7.Removed Options
+8.Authors
+9.See Also
 

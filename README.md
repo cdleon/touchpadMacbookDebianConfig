@@ -27,6 +27,8 @@ Section "InputDevice"
 EndSection
 Description
 
+===========================
+
 synaptics is an Xorg input driver for the touchpads from Synaptics Incorporated. Even though these touchpads (by default, operating in a compatibility mode emulating a standard mouse) can be handled by the normal evdev or mouse drivers, this driver allows more advanced features of the touchpad to become available. Some benefits would be:
 Movement with adjustable, non-linear acceleration and speed.
 Button events through short touching of the touchpad.
@@ -43,6 +45,8 @@ Pressure dependent motion speed.
 Run-time configuration using shared memory. This means you can change parameter settings without restarting the X server.
 Note that depending on the touchpad firmware, some of these features might be available even without using the synaptics driver. Note also that some functions are not available on all touchpad models, because they need support from the touchpad hardware/firmware. (Multifinger taps for example.)
 
+===========================
+
 Configuration Details
 
 Please refer to xorg.conf(5) for general configuration details and for options that can be used with all input drivers. This section only covers configuration details specific to this driver.
@@ -50,18 +54,23 @@ The following driver Options are supported:
 
 Option "Device" "string"
 This option specifies the device file in your "/dev" directory which will be used to access the physical device. Normally you should use something like "/dev/input/eventX", where X is some integer.
+
 Option "Protocol" "string"
 Specifies which kernel driver will be used by this driver. This is the list of supported drivers and their default use scenarios.
 auto-dev	automatic, default (recommend)
 event	Linux 2.6 kernel events
 psaux	raw device access (Linux 2.4)
 psm	FreeBSD psm driver
+
 Option "SHMConfig" "boolean"
 Switch on/off shared memory for run-time configuration. Note that this is considered a security risk since any user can access the configuration. This option is not needed with synaptics 1.0 or later. See section Device Properties.
+
 Option "LeftEdge" "integer"
 X coordinate for left edge. Property: "Synaptics Edges"
+
 Option "RightEdge" "integer"
 X coordinate for right edge. Property: "Synaptics Edges"
+
 Option "TopEdge" "integer"
 Y coordinate for top edge. Property: "Synaptics Edges"
 Option "BottomEdge" "integer"

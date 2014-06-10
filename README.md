@@ -34,14 +34,15 @@ synaptics - Synaptics touchpad input driver
 ###Synopsis
 
 
+```bash
 Section "InputDevice" 
   Identifier "devname" 
   Driver "synaptics" 
   Option "Device"   "devpath" 
   Option "Path"     "path" 
   ... 
-EndSection 
-
+EndSection
+```
 
 ===========================
 

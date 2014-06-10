@@ -7,4 +7,6 @@ synclient FingerHigh=1
 synclient TapButton1=1
 synclient TapButton2=2
 synclient TapButton3=3
+synclient TapAndDragGesture=0
 synclient HorizTwoFingerScroll=1
+synclient PalmDetect=1

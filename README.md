@@ -34,13 +34,13 @@ synaptics - Synaptics touchpad input driver
 ###Synopsis
 
 
-Section "InputDevice"
-  Identifier "devname"
-  Driver "synaptics"
-  Option "Device"   "devpath"
-  Option "Path"     "path"
-  ...
-EndSection
+Section "InputDevice" 
+  Identifier "devname" 
+  Driver "synaptics" 
+  Option "Device"   "devpath" 
+  Option "Path"     "path" 
+  ... 
+EndSection 
 
 
 ===========================
@@ -470,13 +470,14 @@ Xorg(1) , xorg.conf(5) , Xserver(1) , X(7) , synclient(1) , syndaemon(1)
 
 ###Table of Contents
 
-1.Name
-2.Synopsis
-3.Description
-4.Configuration Details
-5.Device Properties
-6.Notes
-7.Removed Options
-8.Authors
-9.See Also
+1. Name
+2. Synopsis
+3. Description
+4. Configuration Details
+5. Device Properties
+6. Notes
+7. Removed Options
+8. Authors
+9. See Also
+
 

@@ -287,10 +287,10 @@ Coasting threshold scrolling speed. 0 disables coasting. Property: "Synaptics Co
 Timeout after a tap to recognize it as a single tap. Property: "Synaptics Tap Durations"
 
 **Option** "GrabEventDevice" "boolean"
-If GrabEventDevice is true, the driver will grab the event device for exclusive use when using the linux 2.6 event protocol. When using other protocols, this **option** has no effect. Grabbing the event device means that no other user space or kernel space program sees the touchpad events. This is desirable if the X config file includes /dev/input/mice as an input device, but is undesirable if you want to monitor the device from user space. When changing this parameter with the synclient program, the change will not take effect until the synaptics driver is disabled and reenabled. This can be achieved by switching to a text console and then switching back to X.
+If GrabEventDevice is true, the driver will grab the event device for exclusive use when using the linux 2.6 event protocol. When using other protocols, this option has no effect. Grabbing the event device means that no other user space or kernel space program sees the touchpad events. This is desirable if the X config file includes /dev/input/mice as an input device, but is undesirable if you want to monitor the device from user space. When changing this parameter with the synclient program, the change will not take effect until the synaptics driver is disabled and reenabled. This can be achieved by switching to a text console and then switching back to X.
 
 **Option** "TapAndDragGesture" "boolean"
-Switch on/off the tap-and-drag gesture. This gesture is an alternative way of dragging. It is performed by tapping (touching and releasing the finger), then touching again and moving the finger on the touchpad. The gesture is enabled by default and can be disabled by setting the TapAndDragGesture **option** to false. Property: "Synaptics Gestures"
+Switch on/off the tap-and-drag gesture. This gesture is an alternative way of dragging. It is performed by tapping (touching and releasing the finger), then touching again and moving the finger on the touchpad. The gesture is enabled by default and can be disabled by setting the TapAndDragGesture option to false. Property: "Synaptics Gestures"
 
 **Option** "VertResolution" "integer"
 Resolution of X coordinates in units/millimeter. The value is used together with HorizResolution to compensate unequal vertical and horizontal sensitivity. Setting VertResolution and HorizResolution equal values means no compensation. Default value is read from the touchpad or set to 1 if value could not be read. Property: "Synaptics Pad Resolution"
@@ -468,7 +468,7 @@ Xorg(1) , xorg.conf(5) , Xserver(1) , X(7) , synclient(1) , syndaemon(1)
 
 ===========================
 
-####Table of Contents
+###Table of Contents
 
 1.Name
 2.Synopsis
